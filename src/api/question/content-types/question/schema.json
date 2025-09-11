@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questionText": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "questionKey": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
+    },
+    "objekttyps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::objekttyp.objekttyp",
+      "mappedBy": "question"
+    },
+    "anlagentyps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::anlagentyp.anlagentyp",
+      "mappedBy": "question"
+    },
+    "qualitaets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::qualitaet.qualitaet",
+      "mappedBy": "question"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technologie.technologie",
+      "mappedBy": "question"
+    },
+    "tuerens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tueren.tueren",
+      "mappedBy": "question"
+    },
+    "funktionens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::funktionen.funktionen",
+      "mappedBy": "question"
+    },
+    "zylinders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zylinder.zylinder",
+      "mappedBy": "question"
+    }
+  }
+}

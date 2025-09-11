@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tuerens",
+  "info": {
+    "singularName": "tueren",
+    "pluralName": "tuerens",
+    "displayName": "Tueren"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "decimal"
+    },
+    "suitableTueren": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::objekttyp.objekttyp",
+      "mappedBy": "tuerens"
+    },
+    "key": {
+      "type": "string"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "tuerens"
+    }
+  }
+}

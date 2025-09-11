@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qualitaets",
+  "info": {
+    "singularName": "qualitaet",
+    "pluralName": "qualitaets",
+    "displayName": "Qualitaet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "decimal"
+    },
+    "zylinders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zylinder.zylinder",
+      "inversedBy": "qualitaets"
+    },
+    "key": {
+      "type": "string"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "qualitaets"
+    }
+  }
+}

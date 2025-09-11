@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "globale_einstellungens",
+  "info": {
+    "singularName": "globale-einstellungen",
+    "pluralName": "globale-einstellungens",
+    "displayName": "globale-einstellungen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo_auswahl": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

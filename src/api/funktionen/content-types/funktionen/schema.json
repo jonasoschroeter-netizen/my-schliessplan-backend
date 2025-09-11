@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funktionens",
+  "info": {
+    "singularName": "funktionen",
+    "pluralName": "funktionens",
+    "displayName": "Funktionen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "decimal"
+    },
+    "zylinders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zylinder.zylinder",
+      "inversedBy": "funktionens"
+    },
+    "key": {
+      "type": "string"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "funktionens"
+    }
+  }
+}

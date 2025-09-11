@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zylinders",
+  "info": {
+    "singularName": "zylinder",
+    "pluralName": "zylinders",
+    "displayName": "Zylinder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "objekttyps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::objekttyp.objekttyp",
+      "mappedBy": "zylinders"
+    },
+    "anlagentyps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::anlagentyp.anlagentyp",
+      "mappedBy": "zylinders"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technologie.technologie",
+      "mappedBy": "zylinders"
+    },
+    "qualitaets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::qualitaet.qualitaet",
+      "mappedBy": "zylinders"
+    },
+    "funktionens": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::funktionen.funktionen",
+      "mappedBy": "zylinders"
+    },
+    "key": {
+      "type": "string"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "zylinders"
+    }
+  }
+}

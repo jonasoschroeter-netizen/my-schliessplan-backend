@@ -1,0 +1,36 @@
+{
+  "name": "my-schliessplan-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.15.0",
+    "@strapi/plugin-users-permissions": "5.15.0",
+    "@strapi/strapi": "5.15.0",
+    "better-sqlite3": "11.3.0",
+    "pg": "^8.16.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "c03a5dc4-81ba-4eab-b163-0a9d010684c4",
+    "installId": "7720880e5c6669e1ff4948f04ffc625e866ef1ba022c3f4834d557e9f809550f"
+  }
+}

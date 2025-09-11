@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anlagentyps",
+  "info": {
+    "singularName": "anlagentyp",
+    "pluralName": "anlagentyps",
+    "displayName": "Anlagentyp"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sortOrder": {
+      "type": "decimal"
+    },
+    "zylinders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zylinder.zylinder",
+      "inversedBy": "anlagentyps"
+    },
+    "key": {
+      "type": "string"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "anlagentyps"
+    }
+  }
+}
