@@ -73,6 +73,12 @@ $RECYCLE.BIN/
 
 
 ############################
+# Seed-Inhalte (optional lokal, nicht committen)
+############################
+
+seed/inhalt.json
+
+############################
 # Misc.
 ############################
 

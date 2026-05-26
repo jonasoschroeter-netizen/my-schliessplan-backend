@@ -1,0 +1,11 @@
+Schließplan – Inhalts-JSON für Strapi
+=====================================
+
+1) Bearbeite `inhalt.json` im gleichen Ordner (oder kopiere von `inhalt-vorlage.json`).
+2) Beim **ersten Start** von Strapi (`npm run develop`), wenn noch **keine** Einträge im Content-Type „Question“ existieren, wird `inhalt.json` automatisch eingespielt und **veröffentlicht** (REST-API liefert die Daten).
+3) Automatik abschalten: Umgebungsvariable `STRAPI_DISABLE_AUTO_SEED=true` setzen.
+4) Bereits befüllte Datenbank: Seed wird übersprungen. Neu einspielen ohne manuelles Löschen: `STRAPI_FORCE_RESEED=true` setzen und Strapi starten (löscht Finder-relevante Collection Types und legt aus `inhalt.json` neu an).
+5) Öffentliche API: Im Strapi-Admin unter **Settings → Users & Permissions → Public** die benötigten `find`-/`findOne`-Rechte für die Collection Types aktivieren.
+6) Cloud: Nach lokalem Seed Inhalte mit `strapi transfer` übertragen (siehe `Dokumentation/Strapi-Lokal-Cloud-Workflow.md`).
+
+Felder und Verknüpfungen siehe Kommentare in `inhalt-vorlage.json`.

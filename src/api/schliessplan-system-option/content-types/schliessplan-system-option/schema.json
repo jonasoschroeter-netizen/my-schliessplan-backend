@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schliessplan_system_options",
+  "info": {
+    "singularName": "schliessplan-system-option",
+    "pluralName": "schliessplan-system-options",
+    "displayName": "Schliessplan System Option",
+    "description": "Optionen fuer das System-Dropdown im Schliessplan inklusive Farbe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "key": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "color": {
+      "type": "string",
+      "default": "#dbeafe"
+    },
+    "techType": {
+      "type": "enumeration",
+      "enum": [
+        "mechanisch",
+        "elektronisch",
+        "neutral"
+      ],
+      "default": "neutral"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

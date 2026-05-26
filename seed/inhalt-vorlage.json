@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "beschreibung": "Vorlage für Schließplan-CMS-Inhalte. Kopie als inhalt.json ausfüllen. Felder mit null optional weglassen."
+  },
+  "questions": [
+    {
+      "questionKey": "objekttyp",
+      "questionText": "Für welchen Objekttyp ist der Schließplan?",
+      "description": "Kurzer Hilfetext für diese Frage.",
+      "type": "single-choice",
+      "order": 1
+    },
+    {
+      "questionKey": "anlagentyp",
+      "questionText": "Welcher Anlagentyp?",
+      "description": "…",
+      "type": "single-choice",
+      "order": 2
+    },
+    {
+      "questionKey": "qualitaet",
+      "questionText": "Welche Qualität?",
+      "description": "…",
+      "type": "single-choice",
+      "order": 3
+    },
+    {
+      "questionKey": "technologie",
+      "questionText": "Welche Technologie?",
+      "description": "…",
+      "type": "single-choice",
+      "order": 4
+    },
+    {
+      "questionKey": "funktionen",
+      "questionText": "Welche Funktion?",
+      "description": "…",
+      "type": "single-choice",
+      "order": 5
+    },
+    {
+      "questionKey": "tueren",
+      "questionText": "Welche Tür?",
+      "description": "…",
+      "type": "single-choice",
+      "order": 6
+    },
+    {
+      "questionKey": "zylinder",
+      "questionText": "Zylinderwahl",
+      "description": "…",
+      "type": "zylinder",
+      "order": 7
+    }
+  ],
+  "objekttyps": [
+    {
+      "key": "wohnung",
+      "name": "Wohnung",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "objekttyp",
+      "tuerenKeys": ["haustuer", "wohnungstuer"]
+    }
+  ],
+  "anlagentyps": [
+    {
+      "key": "mfh",
+      "name": "Mehrfamilienhaus",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "anlagentyp"
+    }
+  ],
+  "qualitaets": [
+    {
+      "key": "standard",
+      "name": "Standard",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "qualitaet"
+    }
+  ],
+  "technologies": [
+    {
+      "key": "mechanisch",
+      "name": "Mechanisch",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "technologie"
+    }
+  ],
+  "funktionens": [
+    {
+      "key": "schliessen",
+      "name": "Schließen",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "funktionen"
+    }
+  ],
+  "tuerens": [
+    {
+      "key": "haustuer",
+      "name": "Haustür",
+      "description": "optional",
+      "sortOrder": 1,
+      "questionKey": "tueren"
+    },
+    {
+      "key": "wohnungstuer",
+      "name": "Wohnungstür",
+      "description": "optional",
+      "sortOrder": 2,
+      "questionKey": "tueren"
+    }
+  ],
+  "zylinders": [
+    {
+      "key": "zyl-001",
+      "name": "Beispiel-Zylinder",
+      "description": "optional",
+      "price": 99.9,
+      "questionKey": "zylinder",
+      "objekttypKeys": ["wohnung"],
+      "anlagentypKeys": ["mfh"],
+      "technologieKeys": ["mechanisch"],
+      "qualitaetKeys": ["standard"],
+      "funktionKeys": ["schliessen"]
+    }
+  ],
+  "globale_einstellungen": {
+    "hinweis": "Single Type – meist ein Eintrag. Ohne Logo-Medien erst mal leer lassen."
+  }
+}
