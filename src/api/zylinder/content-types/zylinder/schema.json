@@ -64,6 +64,9 @@
     "key": {
       "type": "string"
     },
+    "urlCode": {
+      "type": "string"
+    },
     "question": {
       "type": "relation",
       "relation": "manyToOne",

@@ -20,6 +20,9 @@
       "type": "uid",
       "targetField": "name"
     },
+    "urlCode": {
+      "type": "string"
+    },
     "color": {
       "type": "string",
       "default": "#dbeafe"
